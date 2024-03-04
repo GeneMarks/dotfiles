@@ -1,0 +1,86 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.2",
+  "schemes" : [
+    {
+      "buttons" : {
+        "universalBackForward" : true
+      },
+      "if" : {
+        "device" : {
+          "productName" : "HyperX Pulsefire Haste",
+          "productID" : "0x1727",
+          "category" : "mouse",
+          "vendorID" : "0x951"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 2,
+        "speed" : 0.14,
+        "disableAcceleration" : false
+      },
+      "scrolling" : {
+        "speed" : {
+          "vertical" : 0
+        },
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "modifiers" : {
+          "vertical" : {
+            "command" : {
+              "type" : "zoom"
+            }
+          }
+        },
+        "distance" : {
+          "vertical" : 4
+        }
+      }
+    },
+    {
+      "buttons" : {
+        "universalBackForward" : true
+      },
+      "if" : {
+        "device" : {
+          "productName" : "USB Receiver",
+          "productID" : "0xc53f",
+          "category" : "mouse",
+          "vendorID" : "0x46d"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0.3,
+        "speed" : 0.06,
+        "disableAcceleration" : false
+      },
+      "scrolling" : {
+        "acceleration" : 1,
+        "distance" : 3,
+        "speed" : 0
+      }
+    },
+    {
+      "if" : {
+        "app" : "com.apple.launchpad.launcher",
+        "device" : {
+          "productName" : "USB Receiver",
+          "productID" : "0xc53f",
+          "category" : "mouse",
+          "vendorID" : "0x46d"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      }
+    }
+  ]
+}

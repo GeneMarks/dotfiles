@@ -1,0 +1,6 @@
+{
+    "maxJobCount": 6,
+    "overwriteOutput": true,
+    "deleteOriginalFiles": true,
+    "enableDebugLogging": true
+}
