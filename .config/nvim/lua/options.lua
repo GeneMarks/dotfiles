@@ -31,5 +31,8 @@ vim.opt.undofile = true
 -- Fast update time
 vim.opt.updatetime = 50
 
+-- Use fish shell
+vim.opt.shell = "/opt/homebrew/bin/fish"
+
 -- Enable full color terminal
 vim.opt.termguicolors = true
