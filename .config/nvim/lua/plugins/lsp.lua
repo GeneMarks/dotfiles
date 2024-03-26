@@ -34,11 +34,11 @@ return {
         })
 
         -- Cmp config
-        local cmp = require('cmp')
+        local cmp = require("cmp")
 
         cmp.setup({
             mapping = {
-                ['<ENTER>'] = cmp.mapping.confirm({select = false}),
+                ["<ENTER>"] = cmp.mapping.confirm({select = false}),
             }
         })
     end
