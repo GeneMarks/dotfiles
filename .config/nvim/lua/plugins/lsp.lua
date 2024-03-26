@@ -12,7 +12,6 @@ return {
     config = function ()
         -- Lsp-zero config
         local lsp_zero = require("lsp-zero")
-
         lsp_zero.on_attach(function(client, bufnr)
             -- see :help lsp-zero-keybindings
             -- to learn the available actions
@@ -35,7 +34,6 @@ return {
 
         -- Cmp config
         local cmp = require("cmp")
-
         cmp.setup({
             mapping = {
                 ["<ENTER>"] = cmp.mapping.confirm({select = false}),
