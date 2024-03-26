@@ -23,6 +23,7 @@ return {
         require("mason").setup({})
         require("mason-lspconfig").setup({
             ensure_installed = {
+                "clangd",
                 "tsserver",
                 "eslint",
                 "lua_ls"
