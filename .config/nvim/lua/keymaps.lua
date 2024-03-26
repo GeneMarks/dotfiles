@@ -1,5 +1,20 @@
 local wk = require("which-key")
 
+-- New tab
+vim.keymap.set("n", "<leader>tn", "<CMD>tabnew<CR>")
+vim.keymap.set("n", "<leader>tq", "<CMD>tabclose<CR>")
+wk.register({
+    t = {
+        name = "Tabs",
+        n = "New tab",
+        q = "Close current tab",
+    }
+}, { prefix = "<leader>" })
+
+-- Change tabs
+vim.keymap.set("n", "<C-l>", "gt")
+vim.keymap.set("n", "<C-h>", "gT")
+
 -- Shift selections
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -9,10 +24,6 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 wk.register({ ["<C-d>"] = "Jump down with centered cursor" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 wk.register({ ["<C-u>"] = "Jump up with centered cursor" })
-
--- Keep pasted text in buffer
-vim.keymap.set("x", "<leader>p", "\"_dP")
-wk.register({ ["<leader>p"] = "Paste & keep buffer" }, { mode = "x" })
 
 -- Copy text to system clipboard
 vim.keymap.set("n", "<leader>y", "\"+y")
@@ -29,5 +40,5 @@ end)
 wk.register({ ["<leader>e"] = "Show diagnostic message" })
 
 -- Open Netrw
-vim.keymap.set("n", "<leader>w", vim.cmd.Ex)
-wk.register({ ["<leader>w"] = "Open Netrw" })
+-- vim.keymap.set("n", "<leader>w", vim.cmd.Ex)
+-- wk.register({ ["<leader>w"] = "Open Netrw" })
