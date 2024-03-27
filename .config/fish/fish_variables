@@ -4,7 +4,7 @@ SETUVAR --export CC:/opt/clang\x2bllvm/clang\x2bllvm\x2d17\x2e0\x2e6/bin/clang
 SETUVAR --export CFLAGS:\x2disysroot\x20/Library/Developer/CommandLineTools/SDKs/MacOSX\x2esdk\x20
 SETUVAR --export CXX:/opt/clang\x2bllvm/clang\x2bllvm\x2d17\x2e0\x2e6/bin/clang\x2b\x2b
 SETUVAR --export CXXFLAGS:\x2disysroot\x20/Library/Developer/CommandLineTools/SDKs/MacOSX\x2esdk\x20
-SETUVAR --export EDITOR:zed\x20\x2d\x2dwait
+SETUVAR --export EDITOR:nvim\x20
 SETUVAR --export LDFLAGS:\x2dL/Library/Developer/CommandLineTools/SDKs/MacOSX\x2esdk/usr/lib\x20
 SETUVAR __fish_initialized:3400
 SETUVAR _fisher_jorgebucaran_2F_autopair_2E_fish_files:\x7e/\x2econfig/fish/functions/_autopair_backspace\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_left\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_right\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_same\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_tab\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/autopair\x2efish
