@@ -1,6 +1,6 @@
 local wk = require("which-key")
 
--- New tab
+-- Create and close tabs
 vim.keymap.set("n", "<leader>tn", "<CMD>tabnew<CR>")
 vim.keymap.set("n", "<leader>tq", "<CMD>tabclose<CR>")
 wk.register({
@@ -14,6 +14,10 @@ wk.register({
 -- Change tabs
 vim.keymap.set("n", "<C-l>", "gt")
 vim.keymap.set("n", "<C-h>", "gT")
+
+-- Change buffers
+vim.keymap.set("n", "<C-k>", "<CMD>bnext<CR>")
+vim.keymap.set("n", "<C-j>", "<CMD>bprevious<CR>")
 
 -- Shift selections
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
