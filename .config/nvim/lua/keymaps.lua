@@ -33,11 +33,13 @@ wk.register({ ["<leader>y"] = "Copy selection to system clipboard" }, { mode = "
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 wk.register({ ["<leader>Y"] = "Copy line to system clipboard" })
 
--- Show full diagnostic message
-vim.keymap.set("n", "<leader>e", function ()
-    vim.diagnostic.open_float(0, { scope = "line" })
-end)
-wk.register({ ["<leader>e"] = "Show diagnostic message" })
+-- Navigate diagnostics
+vim.keymap.set('n', 'gl', '<CMD>lua vim.diagnostic.open_float()<CR>')
+wk.register({ ["gl"] = "Open diagnostic" })
+vim.keymap.set('n', '[d', '<CMD>lua vim.diagnostic.goto_prev()<CR>')
+wk.register({ ["[d"] = "Previous diagnostic" })
+vim.keymap.set('n', ']d', '<CMD>lua vim.diagnostic.goto_next()<CR>')
+wk.register({ ["]d"] = "Next diagnostic" })
 
 -- Open Netrw
 -- vim.keymap.set("n", "<leader>w", vim.cmd.Ex)
