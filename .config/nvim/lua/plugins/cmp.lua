@@ -11,12 +11,12 @@ return {
 
         cmp.setup({
             mapping = cmp.mapping.preset.insert({
-                ["<CR>"] = cmp.mapping.confirm({ select = false }),
+                ["<CR>"] = cmp.mapping.confirm({ select = true }),
             }),
-            preselect = "item",
-            completion = {
-                completeopt = "menu, menuone, noinsert"
-            },
+            -- preselect = "item",
+            -- completion = {
+            --     completeopt = "menu, menuone, noinsert"
+            -- },
             window = {
                 completion = cmp.config.window.bordered(),
                 documentation = cmp.config.window.bordered(),
