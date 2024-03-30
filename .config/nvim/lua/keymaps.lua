@@ -17,6 +17,15 @@ wk.register({ ["<C-l>"] = "Next tab" })
 vim.keymap.set("n", "<C-h>", "gT")
 wk.register({ ["<C-h>"] = "Previous tab" })
 
+-- Delete buffers
+vim.keymap.set("n", "<leader>bd", "<CMD>bd<CR>")
+wk.register({
+    b = {
+        name = "Buffers",
+        d = "Delete current buffer",
+    }
+}, { prefix = "<leader>" })
+
 -- Change buffers
 vim.keymap.set("n", "<C-k>", "<CMD>bnext<CR>")
 wk.register({ ["<C-k>"] = "Next buffer" })
@@ -42,14 +51,6 @@ vim.keymap.set("v", "<leader>y", "\"+y")
 wk.register({ ["<leader>y"] = "Copy selection to system clipboard" }, { mode = "v" })
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 wk.register({ ["<leader>Y"] = "Copy line to system clipboard" })
-
--- Navigate diagnostics
-vim.keymap.set('n', 'gl', '<CMD>lua vim.diagnostic.open_float()<CR>')
-wk.register({ ["gl"] = "Open diagnostic" })
-vim.keymap.set('n', '[d', '<CMD>lua vim.diagnostic.goto_prev()<CR>')
-wk.register({ ["[d"] = "Previous diagnostic" })
-vim.keymap.set('n', ']d', '<CMD>lua vim.diagnostic.goto_next()<CR>')
-wk.register({ ["]d"] = "Next diagnostic" })
 
 -- Open Netrw
 -- vim.keymap.set("n", "<leader>w", vim.cmd.Ex)
