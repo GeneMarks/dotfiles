@@ -2,7 +2,9 @@ return {
     "shortcuts/no-neck-pain.nvim", version = "*",
     opts = {
         autocmds = {
-            enableOnVimEnter = true
+            enableOnVimEnter = true,
+            enableOnTabEnter = true,
+            skipEnteringNoNeckPainBuffer = true,
         },
         buffers = {
             scratchPad = {
