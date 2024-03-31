@@ -1,5 +1,5 @@
 -- Enter insert mode on terminal buffers
-vim.api.nvim_create_autocmd("BufEnter", {
+vim.api.nvim_create_autocmd({ "TermOpen", "BufEnter" }, {
     pattern = "term://*",
     command = "startinsert",
 })
