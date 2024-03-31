@@ -12,9 +12,11 @@ wk.register({
 }, { prefix = "<leader>" })
 
 -- Change tabs
-vim.keymap.set("n", "<C-l>", "gt")
+vim.keymap.set("n", "<C-l>", "<CMD>tabnext<CR>")
+vim.keymap.set("t", "<C-l>", "<CMD>tabnext<CR>")
 wk.register({ ["<C-l>"] = "Next tab" })
-vim.keymap.set("n", "<C-h>", "gT")
+vim.keymap.set("n", "<C-h>", "<CMD>tabprevious<CR>")
+vim.keymap.set("t", "<C-h>", "<CMD>tabprevious<CR>")
 wk.register({ ["<C-h>"] = "Previous tab" })
 
 -- Create buffers
@@ -28,16 +30,18 @@ wk.register({
 
 -- Change buffers
 vim.keymap.set("n", "<C-k>", "<CMD>bnext<CR>")
+vim.keymap.set("t", "<C-k>", "<CMD>bnext<CR>")
 wk.register({ ["<C-k>"] = "Next buffer" })
 vim.keymap.set("n", "<C-j>", "<CMD>bprevious<CR>")
+vim.keymap.set("t", "<C-j>", "<CMD>bprevious<CR>")
 wk.register({ ["<C-j>"] = "Previous buffer" })
 
 -- Create terminal
 vim.keymap.set("n", [[<leader>\]], "<CMD>terminal<CR>")
 wk.register({ ["<leader>\\"] = "New terminal" })
 
--- Navigate terminal windows
-vim.keymap.set("t", "<esc>", [[<C-\><C-n>]])
+-- Enable terminal window navigation
+vim.keymap.set("t", "<ESC>", [[<C-\><C-n>]])
 vim.keymap.set("t", "<C-w>", [[<C-\><C-n><C-w>]])
 
 -- Shift selections
