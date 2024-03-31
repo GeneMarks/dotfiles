@@ -17,12 +17,12 @@ wk.register({ ["<C-l>"] = "Next tab" })
 vim.keymap.set("n", "<C-h>", "gT")
 wk.register({ ["<C-h>"] = "Previous tab" })
 
--- Delete buffers
-vim.keymap.set("n", "<leader>bd", "<CMD>bd<CR>")
+-- Create buffers
+vim.keymap.set("n", "<leader>bn", "<CMD>enew<CR>")
 wk.register({
     b = {
         name = "Buffers",
-        d = "Delete current buffer",
+        n = "New buffer",
     }
 }, { prefix = "<leader>" })
 
@@ -31,6 +31,14 @@ vim.keymap.set("n", "<C-k>", "<CMD>bnext<CR>")
 wk.register({ ["<C-k>"] = "Next buffer" })
 vim.keymap.set("n", "<C-j>", "<CMD>bprevious<CR>")
 wk.register({ ["<C-j>"] = "Previous buffer" })
+
+-- Create terminal
+vim.keymap.set("n", [[<leader>\]], "<CMD>terminal<CR>")
+wk.register({ ["<leader>\\"] = "New terminal" })
+
+-- Navigate terminal windows
+vim.keymap.set("t", "<esc>", [[<C-\><C-n>]])
+vim.keymap.set("t", "<C-w>", [[<C-\><C-n><C-w>]])
 
 -- Shift selections
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
