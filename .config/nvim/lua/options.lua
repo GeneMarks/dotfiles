@@ -16,6 +16,9 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
+-- Set case insensitive
+vim.opt.ignorecase = true
+
 -- Set search highlighting
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
