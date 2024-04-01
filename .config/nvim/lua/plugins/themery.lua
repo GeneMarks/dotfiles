@@ -5,24 +5,78 @@ return {
             themeConfigFile = "~/.dotfiles/.config/nvim/lua/theme.lua",
             themes = {
                 {
-                    name = "Oxocarbon dark",
+                    name = "Ayu Dark",
+                    colorscheme = "ayu-dark",
+                },
+                {
+                    name = "Ayu Light",
+                    colorscheme = "ayu-light",
+                },
+                {
+                    name = "Ayu Mirage",
+                    colorscheme = "ayu-mirage",
+                },
+                {
+                    name = "Catppuccin Frappe",
+                    colorscheme = "catppuccin-frappe",
+                },
+                {
+                    name = "Catppuccin Latte",
+                    colorscheme = "catppuccin-latte",
+                },
+                {
+                    name = "Catppuccin Macchiato",
+                    colorscheme = "catppuccin-macchiato",
+                },
+                {
+                    name = "Catppuccin Mocha",
+                    colorscheme = "catppuccin-mocha",
+                },
+                {
+                    name = "Github Dark High Contrast",
+                    colorscheme = "github_dark_high_contrast",
+                },
+                {
+                    name = "Tokyonight Day",
+                    colorscheme = "tokyonight-day",
+                },
+                {
+                    name = "Tokyonight Moon",
+                    colorscheme = "tokyonight-moon",
+                },
+                {
+                    name = "Tokyonight Night",
+                    colorscheme = "tokyonight-night",
+                },
+                {
+                    name = "Tokyonight Storm",
+                    colorscheme = "tokyonight-storm",
+                },
+                {
+                    name = "One Dark",
+                    colorscheme = "onedark",
+                },
+                {
+                    name = "One Light",
+                    colorscheme = "onedark",
+                    before = [[
+                        require("onedark").setup({
+                            style = "light"
+                        })
+                    ]],
+                },
+                {
+                    name = "Oxocarbon Dark",
                     colorscheme = "oxocarbon",
                     before = [[
                         vim.opt.background = "dark"
                     ]],
                 },
                 {
-                    name = "Catppuccin latte",
-                    colorscheme = "catppuccin-latte",
+                    name = "Oxocarbon Light",
+                    colorscheme = "oxocarbon",
                     before = [[
                         vim.opt.background = "light"
-                    ]],
-                },
-                {
-                    name = "Github dark high contrast",
-                    colorscheme = "github_dark_high_contrast",
-                    before = [[
-                        vim.opt.background = "dark"
                     ]],
                 },
             }
