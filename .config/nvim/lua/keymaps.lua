@@ -34,10 +34,6 @@ wk.register({ ["<C-k>"] = "Next buffer" })
 vim.keymap.set("n", "<C-j>", "<CMD>bprevious<CR>")
 wk.register({ ["<C-j>"] = "Previous buffer" })
 
--- Create terminal
-vim.keymap.set("n", [[<leader>\]], "<CMD>terminal<CR>")
-wk.register({ ["<leader>\\"] = "New terminal" })
-
 -- Enable terminal window navigation
 vim.keymap.set("t", "<ESC>", [[<C-\><C-n>]])
 vim.keymap.set("t", "<C-w>", [[<C-\><C-n><C-w>]])
