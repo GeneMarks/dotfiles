@@ -26,5 +26,7 @@ return {
 
         vim.keymap.set("n", "<leader>bo", delete_other_buffers, { silent = true, noremap = true })
         wk.register({ ["<leader>bo"] = "Delete all other buffers" })
+        vim.keymap.set("n", "<leader>ba", "<CMD>%Bdelete<CR>")
+        wk.register({ ["<leader>ba"] = "Delete all buffers" })
     end
 }
