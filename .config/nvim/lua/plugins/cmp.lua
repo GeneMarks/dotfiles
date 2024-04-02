@@ -26,6 +26,9 @@ return {
                 { name = "buffer" },
             },
             formatting = cmp_format,
+            experimental = {
+                ghost_text = true,
+            },
         })
 
         cmp.setup.cmdline("/", {
