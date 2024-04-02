@@ -3,11 +3,13 @@ local wk = require("which-key")
 -- Create and close tabs
 vim.keymap.set("n", "<leader>tn", "<CMD>tabnew<CR>")
 vim.keymap.set("n", "<leader>tq", "<CMD>tabclose<CR>")
+vim.keymap.set("n", "<leader>to", "<CMD>tabonly<CR>")
 wk.register({
     t = {
         name = "Tabs",
         n = "New tab",
         q = "Close current tab",
+        o = "Close all other tabs",
     }
 }, { prefix = "<leader>" })
 
