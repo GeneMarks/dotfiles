@@ -30,10 +30,8 @@ wk.register({
 
 -- Change buffers
 vim.keymap.set("n", "<C-k>", "<CMD>bnext<CR>")
-vim.keymap.set("t", "<C-k>", "<CMD>bnext<CR>")
 wk.register({ ["<C-k>"] = "Next buffer" })
 vim.keymap.set("n", "<C-j>", "<CMD>bprevious<CR>")
-vim.keymap.set("t", "<C-j>", "<CMD>bprevious<CR>")
 wk.register({ ["<C-j>"] = "Previous buffer" })
 
 -- Create terminal
