@@ -55,14 +55,15 @@ return {
                 {
                     name = "One Dark",
                     colorscheme = "onedark",
+                    before = [[
+                        vim.opt.background = "dark"
+                    ]],
                 },
                 {
                     name = "One Light",
                     colorscheme = "onedark",
                     before = [[
-                        require("onedark").setup({
-                            style = "light"
-                        })
+                        vim.opt.background = "light"
                     ]],
                 },
                 {
