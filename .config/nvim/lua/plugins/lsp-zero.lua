@@ -35,17 +35,27 @@ return {
             },
             handlers = {
                 lsp_zero.default_setup,
+                tsserver = function()
+                    require("lspconfig").tsserver.setup({
+                        settings = {
+                            completions = {
+                                completeFunctionCalls = true,
+                            },
+                        }
+                    })
+                end,
             },
         })
 
         -- Cmp config
         local cmp = require("cmp")
-        local cmp_format = require("lsp-zero").cmp_format({ details = true })
         local cmp_action = require("lsp-zero").cmp_action()
 
         cmp.setup({
             mapping = cmp.mapping.preset.insert({
                 ["<CR>"] = cmp.mapping.confirm({ select = true }),
+                ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+                ['<C-d>'] = cmp.mapping.scroll_docs(4),
                 ["<C-SPACE>"] = cmp.mapping.complete(),
                 ["<C-l>"] = cmp_action.luasnip_jump_forward(),
                 ["<C-h>"] = cmp_action.luasnip_jump_backward(),
@@ -62,7 +72,21 @@ return {
                 { name = "nvim_lsp" },
                 { name = "buffer" },
             },
-            formatting = cmp_format,
+            formatting = {
+                fields = { "abbr", "kind", "menu" },
+                format = function(entry, item)
+                    local source = entry.source.name
+                    local formatted = {
+                        nvim_lsp = "LSP",
+                        buffer = "Buffer",
+                        path = "Path",
+                        cmdline = "CMD",
+                    }
+                    item.menu = " [" .. formatted[source] .. "]"
+
+                    return item
+                end,
+            },
             snippet = {
                 expand = function(args)
                     require("luasnip").lsp_expand(args.body)
