@@ -1,3 +1,7 @@
+-- Save to disk
+vim.keymap.set({ "n", "v", "i" }, "<C-s>", "<CMD>update<CR>", { desc = "Update buffer" })
+vim.keymap.set("n", "<leader>w", "<CMD>wall<CR>", { desc = "Write all" })
+
 -- Create and close tabs
 vim.keymap.set("n", "<leader>tn", "<CMD>tabnew<CR>", { desc = "New tab" })
 vim.keymap.set("n", "<leader>tq", "<CMD>tabclose<CR>", { desc = "Close current tab" })
