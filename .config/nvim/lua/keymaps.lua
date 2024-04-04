@@ -40,12 +40,16 @@ vim.keymap.set("n", "<C-6>", "6gt")
 vim.keymap.set("t", "<C-6>", [[<C-\><C-n>6gt]])
 wk.register({ ["<C-6>"] = "Jump to tab 6" })
 
--- Create buffers
+-- Create and delete buffers
 vim.keymap.set("n", "<leader>bn", "<CMD>enew<CR>")
+vim.keymap.set("n", "<leader>ba", "<CMD>%bdelete<CR>")
+vim.keymap.set("n", "<leader>bo", "<CMD>%bdelete|edit#|bdelete#<CR>")
 wk.register({
     b = {
         name = "Buffers",
         n = "New buffer",
+        a = "Delete all buffers",
+        o = "Delete all other buffers",
     }
 }, { prefix = "<leader>" })
 
