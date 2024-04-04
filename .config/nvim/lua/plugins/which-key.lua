@@ -5,17 +5,14 @@ return {
         vim.o.timeout = true
         vim.o.timeoutlen = 300
     end,
-    opts = {
-        defaults = {
-            ["<leader>t"] = { name = "+Tabs" },
-            ["<leader>b"] = { name = "+Buffers" },
-            ["<leader>f"] = { name = "+Telescope" },
-            ["<leader>h"] = { name = "+Gitsigns" },
-        },
-    },
+    opts = {},
     config = function(_, opts)
         local wk = require("which-key")
         wk.setup(opts)
-        wk.register(opts.defaults)
+
+        wk.register({ ["<leader>t"] = { name = "+Tabs" } }, { mode = "n" })
+        wk.register({ ["<leader>b"] = { name = "+Buffers" } }, { mode = "n" })
+        wk.register({ ["<leader>f"] = { name = "+Telescope" } }, { mode = "n" })
+        wk.register({ ["<leader>h"] = { name = "+Gitsigns" } }, { mode = { "n", "v" } })
     end
 }
