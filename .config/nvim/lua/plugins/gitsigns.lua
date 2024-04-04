@@ -1,61 +1,34 @@
 return {
     "lewis6991/gitsigns.nvim",
     config = function()
-        require("gitsigns").setup({
-            on_attach = function(bufnr)
-                local gs = package.loaded.gitsigns
+        require("gitsigns").setup({})
 
-                local function map(mode, l, r, opts)
-                    opts = opts or {}
-                    opts.buffer = bufnr
-                    vim.keymap.set(mode, l, r, opts)
-                end
+        local gs = package.loaded.gitsigns
 
-                local wk = require("which-key")
+        -- Navigation
+        vim.keymap.set("n", "]c", function()
+            if vim.wo.diff then return "]c" end
+            vim.schedule(function() gs.next_hunk() end)
+            return "<Ignore>"
+        end, { expr = true, desc = "Next hunk" })
 
-                -- Navigation
-                map('n', ']c', function()
-                    if vim.wo.diff then return ']c' end
-                    vim.schedule(function() gs.next_hunk() end)
-                    return '<Ignore>'
-                end, {expr=true})
-                wk.register({ ["]c"] = "Next hunk" })
+        vim.keymap.set("n", "[c", function()
+            if vim.wo.diff then return "[c" end
+            vim.schedule(function() gs.prev_hunk() end)
+            return "<Ignore>"
+        end, { expr = true, desc = "Previous hunk" })
 
-                map('n', '[c', function()
-                    if vim.wo.diff then return '[c' end
-                    vim.schedule(function() gs.prev_hunk() end)
-                    return '<Ignore>'
-                end, {expr=true})
-                wk.register({ ["[c"] = "Previous hunk" })
-
-                -- Actions
-                map('n', '<leader>hs', gs.stage_hunk)
-                map('n', '<leader>hr', gs.reset_hunk)
-                map('v', '<leader>hs', function() gs.stage_hunk { vim.fn.line('.'), vim.fn.line('v') } end)
-                map('v', '<leader>hr', function() gs.reset_hunk { vim.fn.line('.'), vim.fn.line('v') } end)
-                map('n', '<leader>hS', gs.stage_buffer)
-                map('n', '<leader>hu', gs.undo_stage_hunk)
-                map('n', '<leader>hR', gs.reset_buffer)
-                map('n', '<leader>hp', gs.preview_hunk)
-                map('n', '<leader>hb', gs.toggle_current_line_blame)
-                map('n', '<leader>hd', gs.diffthis)
-                map('n', '<leader>hl', gs.toggle_deleted)
-
-                wk.register({
-                    h = {
-                        name = "Gitsigns",
-                        s = "Stage hunk",
-                        r = "Reset hunk",
-                        S = "Stage buffer",
-                        u = "Undo stage hunk",
-                        R = "Reset buffer",
-                        p = "Preview hunk",
-                        b = "Toggle line blame",
-                        l = "Toggle deleted",
-                        d = "Diff this",
-                    }
-                }, { prefix = "<leader>" })
-            end
-        })
+        -- Actions
+        vim.keymap.set("n", "<leader>hs", gs.stage_hunk, { desc = "Stage hunk" })
+        vim.keymap.set("n", "<leader>hr", gs.reset_hunk, { desc = "Reset hunk" })
+        vim.keymap.set("v", "<leader>hs", function() gs.stage_hunk { vim.fn.line("."), vim.fn.line("v") } end, { desc = "Stage hunk" })
+        vim.keymap.set("v", "<leader>hr", function() gs.reset_hunk { vim.fn.line("."), vim.fn.line("v") } end, { desc = "Reset hunk" })
+        vim.keymap.set("n", "<leader>hS", gs.stage_buffer, { desc = "Stage buffer" })
+        vim.keymap.set("n", "<leader>hu", gs.undo_stage_hunk, { desc = "Undo stage hunk" })
+        vim.keymap.set("n", "<leader>hR", gs.reset_buffer, { desc = "Reset buffer" })
+        vim.keymap.set("n", "<leader>hp", gs.preview_hunk, { desc = "Preview hunk" })
+        vim.keymap.set("n", "<leader>hb", gs.toggle_current_line_blame, { desc = "Toggle line blame" })
+        vim.keymap.set("n", "<leader>hd", gs.diffthis, { desc = "Toggle deleted" })
+        vim.keymap.set("n", "<leader>hl", gs.toggle_deleted, { desc = "Diff this" })
     end
 }

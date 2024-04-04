@@ -20,26 +20,13 @@ return {
         telescope.load_extension("session-lens")
 
         -- Keymaps
-        local wk = require("which-key")
         local builtin = require("telescope.builtin")
 
-        vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
-        vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
-        vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
-        vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
-        vim.keymap.set("n", "<leader>fu", "<CMD>Telescope undo<CR>")
-        vim.keymap.set("n", "<leader>fs", "<CMD>SearchSession<CR>")
-
-        wk.register({
-            f = {
-                name = "Telescope",
-                f = "Find files",
-                g = "Live grep",
-                b = "Search buffers",
-                h = "Search help tags",
-                u = "Search undo history",
-                s = "Search sessions",
-            }
-        }, { prefix = "<leader>" })
+        vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find files" })
+        vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live grep" })
+        vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Search buffers" })
+        vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Search help tags" })
+        vim.keymap.set("n", "<leader>fu", "<CMD>Telescope undo<CR>", { desc = "Search undo history" })
+        vim.keymap.set("n", "<leader>fs", "<CMD>SearchSession<CR>", { desc = "Search sessions" })
     end
 }

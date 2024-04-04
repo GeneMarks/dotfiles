@@ -5,8 +5,6 @@ return {
             delete_to_trash = true,
         })
 
-        local wk = require("which-key")
-        vim.keymap.set("n", "<leader>o", "<CMD>Oil<CR>")
-        wk.register({ ["<leader>o"] = "Oil" })
+        vim.keymap.set("n", "<leader>o", "<CMD>Oil<CR>", { desc = "Oil" })
     end
 }

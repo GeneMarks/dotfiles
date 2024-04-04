@@ -17,8 +17,7 @@ return {
                 }
             }
         })
-        local wk = require("which-key")
-        vim.keymap.set("n", "<leader>n", "<CMD>NoNeckPain<CR>")
-        wk.register({ ["<leader>n"] = "No Neck Pain" })
+
+        vim.keymap.set("n", "<leader>n", "<CMD>NoNeckPain<CR>", { desc = "No Neck Pain" })
     end
 }

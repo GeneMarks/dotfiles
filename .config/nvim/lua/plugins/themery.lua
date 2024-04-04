@@ -83,9 +83,6 @@ return {
             }
         })
 
-        local wk = require("which-key")
-
-        vim.keymap.set("n", "<leader>c", "<CMD>Themery<CR>")
-        wk.register({ ["<leader>c"] = "Change colorscheme" })
+        vim.keymap.set("n", "<leader>c", "<CMD>Themery<CR>", { desc = "Change colorscheme" })
     end
 }

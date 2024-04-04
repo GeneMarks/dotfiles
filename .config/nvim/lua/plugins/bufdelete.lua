@@ -1,8 +1,6 @@
 return {
     "famiu/bufdelete.nvim",
     config = function()
-        local wk = require("which-key")
-        vim.keymap.set("n", "<leader>bd", "<CMD>Bdelete<CR>")
-        wk.register({ ["<leader>bd"] = "Delete current buffer" })
+        vim.keymap.set("n", "<leader>bd", "<CMD>Bdelete<CR>", { desc = "Delete current buffer" })
     end
 }
