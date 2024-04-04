@@ -1,4 +1,6 @@
 return {
     "navarasu/onedark.nvim",
-    opts = {}
+    name = "theme-onedark",
+    lazy = false,
+    priority = 1000,
 }
