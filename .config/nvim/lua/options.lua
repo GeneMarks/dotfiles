@@ -31,6 +31,9 @@ vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
 vim.opt.undofile = true
 
+-- What sessions save
+vim.opt.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,localoptions"
+
 -- Fast update time
 vim.opt.updatetime = 50
 
