@@ -23,6 +23,9 @@ vim.opt.ignorecase = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
+-- Use system clipboard
+vim.opt.clipboard = "unnamedplus"
+
 -- Disable auto backups
 vim.opt.swapfile = false
 vim.opt.backup = false
