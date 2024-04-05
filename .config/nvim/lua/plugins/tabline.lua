@@ -1,4 +1,7 @@
 return {
     "crispgm/nvim-tabline",
-    opts = {}
+    opts = {
+        brackets = { " ", "" },
+        inactive_tab_max_length = 14,
+    }
 }
