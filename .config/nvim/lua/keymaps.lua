@@ -1,7 +1,3 @@
--- Leave insert mode
-vim.keymap.set("i", "jk", "<ESC>", { desc = "Leave insert mode" })
-vim.keymap.set("i", "kj", "<ESC>", { desc = "Leave insert mode" })
-
 -- Save to disk
 vim.keymap.set({ "n", "v", "i" }, "<C-s>", "<CMD>update<CR>", { desc = "Update buffer" })
 vim.keymap.set("n", "<leader>w", "<CMD>wall<CR>", { desc = "Write all" })
