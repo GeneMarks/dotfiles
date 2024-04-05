@@ -5,10 +5,11 @@ return {
     priority = 1000,
     config = function()
         require("catppuccin").setup({
+            no_bold = true,
             highlight_overrides = {
                 latte = function(latte)
                     return {
-                        MatchParen = { bg = "#e2e4e9" }
+                        MatchParen = { bg = "#e2e4e9" },
                     }
                 end
             }
