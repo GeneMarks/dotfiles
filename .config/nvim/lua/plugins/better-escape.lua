@@ -2,7 +2,7 @@ return {
     "max297574/better-escape.nvim",
     config = function()
         require("better_escape").setup({
-            mapping = { "jk", "kj" },
+            mapping = { "jk" },
         })
     end
 }
