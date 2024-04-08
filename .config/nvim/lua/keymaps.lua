@@ -2,6 +2,12 @@
 vim.keymap.set({ "n", "v", "i" }, "<C-s>", "<CMD>update<CR>", { desc = "Update buffer" })
 vim.keymap.set("n", "<leader>w", "<CMD>wall<CR>", { desc = "Write all" })
 
+-- Resize windows
+vim.keymap.set("n", "<Right>", "<CMD>vertical resize +5<CR>", { desc = "Vertical resize +5" })
+vim.keymap.set("n", "<Left>", "<CMD>vertical resize -5<CR>", { desc = "Vertical resize -5" })
+vim.keymap.set("n", "<Up>", "<CMD>horizontal resize +2<CR>", { desc = "Horizontal resize +2" })
+vim.keymap.set("n", "<Down>", "<CMD>horizontal resize -2<CR>", { desc = "Horizontal resize -2" })
+
 -- Create and close tabs
 vim.keymap.set("n", "<leader>tn", "<CMD>tabnew<CR>", { desc = "New tab" })
 vim.keymap.set("n", "<leader>tq", "<CMD>tabclose<CR>", { desc = "Close current tab" })
