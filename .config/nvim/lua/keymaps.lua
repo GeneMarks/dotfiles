@@ -32,6 +32,7 @@ vim.keymap.set("n", "<leader>bo", "<CMD>%bdelete|edit#|bdelete#<CR>", { desc = "
 -- Change buffers
 vim.keymap.set("n", "<C-k>", "<CMD>bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<C-j>", "<CMD>bprevious<CR>", { desc = "Previous buffer" })
+vim.keymap.set("n", "<C-p>", "<CMD>b#<CR>", { desc = "Last active buffer" })
 
 -- Terminal window navigation
 vim.keymap.set("t", "<ESC>", [[<C-\><C-n>]])
