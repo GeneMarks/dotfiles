@@ -6,14 +6,14 @@ return {
         local gs = package.loaded.gitsigns
 
         -- Navigation
-        vim.keymap.set("n", "]c", function()
-            if vim.wo.diff then return "]c" end
+        vim.keymap.set("n", "]h", function()
+            if vim.wo.diff then return "]h" end
             vim.schedule(function() gs.next_hunk() end)
             return "<Ignore>"
         end, { desc = "Next hunk", expr = true })
 
-        vim.keymap.set("n", "[c", function()
-            if vim.wo.diff then return "[c" end
+        vim.keymap.set("n", "[h", function()
+            if vim.wo.diff then return "[h" end
             vim.schedule(function() gs.prev_hunk() end)
             return "<Ignore>"
         end, { desc = "Previous hunk", expr = true })
