@@ -28,7 +28,7 @@ return {
         vim.keymap.set("n", "<leader>hR", gs.reset_buffer, { desc = "Reset buffer" })
         vim.keymap.set("n", "<leader>hp", gs.preview_hunk, { desc = "Preview hunk" })
         vim.keymap.set("n", "<leader>hb", gs.toggle_current_line_blame, { desc = "Toggle line blame" })
-        vim.keymap.set("n", "<leader>hd", gs.diffthis, { desc = "Toggle deleted" })
-        vim.keymap.set("n", "<leader>hl", gs.toggle_deleted, { desc = "Diff this" })
+        vim.keymap.set("n", "<leader>hd", gs.diffthis, { desc = "Diff this" })
+        vim.keymap.set("n", "<leader>hl", gs.toggle_deleted, { desc = "Toggle deleted" })
     end
 }
