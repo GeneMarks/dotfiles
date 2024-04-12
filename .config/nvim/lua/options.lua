@@ -38,7 +38,7 @@ vim.opt.undofile = true
 vim.opt.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,localoptions"
 
 -- Fast update time
-vim.opt.updatetime = 50
+vim.opt.updatetime = 250
 
 -- Use fish shell
 vim.opt.shell = "/opt/homebrew/bin/fish"
