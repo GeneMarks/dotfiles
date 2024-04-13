@@ -18,6 +18,7 @@ vim.opt.smartindent = true
 
 -- Set case insensitive
 vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- Set search highlighting
 vim.opt.hlsearch = false
