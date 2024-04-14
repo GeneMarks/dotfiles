@@ -38,6 +38,11 @@ vim.keymap.set("n", "<C-p>", "<CMD>b#<CR>", { desc = "Last active buffer" })
 vim.keymap.set("t", "<ESC>", [[<C-\><C-n>]])
 vim.keymap.set("t", "<C-w>", [[<C-\><C-n><C-w>]])
 
+-- Diagnostic navigation
+vim.keymap.set("n", "gl", "<CMD>lua vim.diagnostic.open_float()<CR>", { desc = "Open diagnostic float" })
+vim.keymap.set("n", "]d", "<CMD>lua vim.diagnostic.goto_next()<CR>", { desc = "Next diagnostic" })
+vim.keymap.set("n", "[d", "<CMD>lua vim.diagnostic.goto_prev()<CR>", { desc = "Previous diagnostic" })
+
 -- Shift selections
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Shift selection down" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Shift selection up" })
