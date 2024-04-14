@@ -1,6 +1,6 @@
 return {
     "Shatur/neovim-ayu",
-    name = "theme-ayu",
+    name = "colorscheme-ayu",
     lazy = false,
     priority = 1000,
     config = function()

@@ -1,6 +1,6 @@
 return {
     "folke/tokyonight.nvim",
-    name = "theme-tokyonight",
+    name = "colorscheme-tokyonight",
     lazy = false,
     priority = 1000,
 }

@@ -1,6 +1,6 @@
 return {
     "catppuccin/nvim",
-    name = "theme-catppuccin",
+    name = "colorscheme-catppuccin",
     lazy = false,
     priority = 1000,
     config = function()
