@@ -42,7 +42,7 @@ return {
         end
 
         local lspconfig = require("lspconfig")
-        local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+        local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 
         local handlers = {}
         for _, server in ipairs(servers) do
@@ -59,8 +59,8 @@ return {
             end
         end
 
-        require('mason').setup({})
-        require('mason-lspconfig').setup({
+        require("mason").setup({})
+        require("mason-lspconfig").setup({
             ensure_installed = servers,
             handlers = handlers
         })

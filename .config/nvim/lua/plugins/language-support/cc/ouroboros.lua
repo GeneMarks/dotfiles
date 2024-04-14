@@ -7,7 +7,7 @@ return {
         vim.api.nvim_create_autocmd("FileType", {
             pattern = {"c", "cpp"},
             callback = function()
-                vim.api.nvim_buf_set_keymap(0, 'n', '<C-e>', '<CMD>Ouroboros<CR>', {
+                vim.api.nvim_buf_set_keymap(0, "n", "<C-e>", "<CMD>Ouroboros<CR>", {
                     desc = "Switch h/cpp files",
                     noremap = true,
                     silent = true

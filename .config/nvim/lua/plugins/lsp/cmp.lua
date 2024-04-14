@@ -17,7 +17,7 @@ return {
                 else
                     fallback()
                 end
-            end, {'i', 's'})
+            end, {"i", "s"})
         end
 
         cmp.setup({
