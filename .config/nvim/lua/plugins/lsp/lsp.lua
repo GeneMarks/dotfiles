@@ -30,12 +30,7 @@ return {
             end
         })
 
-        local lspconfig = require("lspconfig")
-        local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
-
         -- Mason config
-        require('mason').setup({})
-
         local function deep_merge(t1, t2)
             for k, v in pairs(t2) do
                 if type(v) == "table" and type(t1[k]) == "table" then
@@ -45,6 +40,9 @@ return {
                 end
             end
         end
+
+        local lspconfig = require("lspconfig")
+        local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
         local handlers = {}
         for _, server in ipairs(servers) do
@@ -61,6 +59,7 @@ return {
             end
         end
 
+        require('mason').setup({})
         require('mason-lspconfig').setup({
             ensure_installed = servers,
             handlers = handlers
