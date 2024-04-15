@@ -1,3 +1,3 @@
-alias clang="clang_with_flags"
-alias clang++="clangpp_with_flags"
+alias clang=$CC
+alias clang++="$CXX -std=c++20"
 alias g++="g++-13"
