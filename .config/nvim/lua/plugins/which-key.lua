@@ -17,6 +17,7 @@ return {
         wk.setup(opts)
 
         wk.register({ ["<leader>b"] = { name = "+Buffers" } }, { mode = "n" })
+        wk.register({ ["<leader>d"] = { name = "+Trouble" } }, { mode = "n" })
         wk.register({ ["<leader>h"] = { name = "+Gitsigns" } }, { mode = { "n", "v" } })
         wk.register({ ["<leader>t"] = { name = "+Tabs" } }, { mode = "n" })
         wk.register({ ["<leader>f"] = { name = "+Telescope" } }, { mode = "n" })
