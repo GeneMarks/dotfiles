@@ -9,9 +9,8 @@ return {
         })
 
         -- Hide underline (bug?)
-        vim.api.nvim_create_autocmd({ "BufWinEnter", "ColorScheme" }, {
+        vim.api.nvim_create_autocmd({ "ColorScheme" }, {
             pattern = "*",
-            once = true,
             callback = function()
                 vim.cmd [[ hi TreesitterContextBottom gui=none ]]
             end
