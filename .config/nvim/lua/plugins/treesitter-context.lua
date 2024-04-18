@@ -7,6 +7,16 @@ return {
             min_window_height = 10,
             multiline_threshold = 2,
         })
+
+        -- Hide underline (bug?)
+        vim.api.nvim_create_autocmd({ "BufWinEnter", "ColorScheme" }, {
+            pattern = "*",
+            once = true,
+            callback = function()
+                vim.cmd [[ hi TreesitterContextBottom gui=none ]]
+            end
+        })
+
         vim.keymap.set("n", "[c", function()
             treesittercon.go_to_context(vim.v.count1)
         end, { desc = "Go to context", silent = true })
