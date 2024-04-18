@@ -8,6 +8,9 @@ vim.opt.relativenumber = true
 -- Add padding to scroll
 vim.opt.scrolloff = 8
 
+-- Always show signcolumn
+vim.opt.signcolumn = "yes:2"
+
 -- Set tab width to 4 spaces
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -36,7 +39,7 @@ vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
 vim.opt.undofile = true
 
 -- What sessions save
-vim.opt.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,localoptions"
+vim.opt.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos"
 
 -- Fast update time
 vim.opt.updatetime = 250
