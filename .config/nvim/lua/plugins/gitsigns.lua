@@ -24,7 +24,7 @@ return {
         vim.keymap.set("v", "<leader>hs", function() gs.stage_hunk { vim.fn.line("."), vim.fn.line("v") } end, { desc = "Stage hunk" })
         vim.keymap.set("v", "<leader>hr", function() gs.reset_hunk { vim.fn.line("."), vim.fn.line("v") } end, { desc = "Reset hunk" })
         vim.keymap.set("n", "<leader>hS", gs.stage_buffer, { desc = "Stage buffer" })
-        vim.keymap.set("n", "<leader>hu", gs.undo_stage_hunk, { desc = "Undo stage hunk" })
+        vim.keymap.set("n", "<leader>hu", gs.undo_stage_hunk, { desc = "Undo stage" })
         vim.keymap.set("n", "<leader>hR", gs.reset_buffer, { desc = "Reset buffer" })
         vim.keymap.set("n", "<leader>hp", gs.preview_hunk, { desc = "Preview hunk" })
         vim.keymap.set("n", "<leader>hb", gs.toggle_current_line_blame, { desc = "Toggle line blame" })
