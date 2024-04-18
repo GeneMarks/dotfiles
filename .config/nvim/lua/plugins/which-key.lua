@@ -5,16 +5,15 @@ return {
         vim.o.timeout = true
         vim.o.timeoutlen = 300
     end,
-    opts = {
-        icons = {
-            breadcrumb = "»",
-            separator = "›",
-            group = "+"
-        }
-    },
-    config = function(_, opts)
+    config = function()
         local wk = require("which-key")
-        wk.setup(opts)
+        wk.setup({
+            icons = {
+                breadcrumb = "»",
+                separator = "›",
+                group = "+"
+            },
+        })
 
         wk.register({ ["<leader>b"] = { name = "+Buffers" } }, { mode = "n" })
         wk.register({ ["<leader>d"] = { name = "+Trouble" } }, { mode = "n" })
