@@ -9,7 +9,7 @@ vim.opt.relativenumber = true
 vim.opt.scrolloff = 8
 
 -- Always show signcolumn
-vim.opt.signcolumn = "yes:1"
+vim.opt.signcolumn = "yes:2"
 
 -- Set tab width to 4 spaces
 vim.opt.tabstop = 4
