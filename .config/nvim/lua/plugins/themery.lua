@@ -53,20 +53,6 @@ return {
                     colorscheme = "tokyonight-storm",
                 },
                 {
-                    name = "One Dark",
-                    colorscheme = "onedark",
-                    before = [[
-                        vim.opt.background = "dark"
-                    ]],
-                },
-                {
-                    name = "One Light",
-                    colorscheme = "onedark",
-                    before = [[
-                        vim.opt.background = "light"
-                    ]],
-                },
-                {
                     name = "Oxocarbon Dark",
                     colorscheme = "oxocarbon",
                     before = [[
