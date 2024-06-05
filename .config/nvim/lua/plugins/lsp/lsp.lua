@@ -10,7 +10,8 @@ return {
             "jdtls",
             "tsserver",
             "eslint",
-            "lua_ls"
+            "lua_ls",
+            "tailwindcss"
         }
 
         -- Lsp keymaps
