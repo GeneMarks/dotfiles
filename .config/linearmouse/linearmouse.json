@@ -1,27 +1,15 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.2",
   "schemes" : [
     {
+      "pointer" : {
+        "acceleration" : 0.2,
+        "speed" : 0.365,
+        "disableAcceleration" : false
+      },
       "buttons" : {
         "universalBackForward" : true
       },
-      "if" : {
-        "device" : {
-          "productName" : "HyperX Pulsefire Haste",
-          "productID" : "0x1727",
-          "category" : "mouse",
-          "vendorID" : "0x951"
-        }
-      },
-      "pointer" : {
-        "acceleration" : 2,
-        "speed" : 0.14,
-        "disableAcceleration" : false
-      },
       "scrolling" : {
-        "speed" : {
-          "vertical" : 0
-        },
         "acceleration" : {
           "vertical" : 1
         },
@@ -32,15 +20,23 @@
             }
           }
         },
+        "speed" : {
+          "vertical" : 0
+        },
         "distance" : {
           "vertical" : 4
+        }
+      },
+      "if" : {
+        "device" : {
+          "vendorID" : "0x951",
+          "category" : "mouse",
+          "productName" : "HyperX Pulsefire Haste",
+          "productID" : "0x1727"
         }
       }
     },
     {
-      "buttons" : {
-        "universalBackForward" : true
-      },
       "if" : {
         "device" : {
           "productName" : "USB Receiver",
@@ -55,20 +51,23 @@
         "disableAcceleration" : false
       },
       "scrolling" : {
-        "acceleration" : 1,
+        "speed" : 0,
         "distance" : 3,
-        "speed" : 0
+        "acceleration" : 1
+      },
+      "buttons" : {
+        "universalBackForward" : true
       }
     },
     {
       "if" : {
-        "app" : "com.apple.launchpad.launcher",
         "device" : {
           "productName" : "USB Receiver",
           "productID" : "0xc53f",
           "category" : "mouse",
           "vendorID" : "0x46d"
-        }
+        },
+        "app" : "com.apple.launchpad.launcher"
       },
       "scrolling" : {
         "acceleration" : {
@@ -82,5 +81,6 @@
         }
       }
     }
-  ]
+  ],
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.5"
 }
